@@ -7,7 +7,7 @@ export default {
 
 }
 
-function getPosition() {
+function businesses() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
     //console.log(showPosition);
