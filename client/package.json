@@ -1,5 +1,5 @@
 {
-  "name": "project-3",
+  "name": "project3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -35,12 +35,10 @@
   "devDependencies": {
     "eslint-plugin-react": "^7.21.4"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": ".eslintrc.js",
   "repository": {
     "type": "git",
-    "url": "project-3"
+    "url": "project3"
   },
-  "author": "ram",
-  "license": "MIT"
+  "license": "Apache2.0"
 }
