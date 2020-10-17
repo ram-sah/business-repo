@@ -1,4 +1,5 @@
 module.exports = {
     Discount: require("./discounts"),
-    Veteran: require("./veteran")
+    Veteran: require("./veteran"),
+    CategoryModel: require("./categories")
 };

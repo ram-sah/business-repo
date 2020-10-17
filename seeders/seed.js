@@ -7,31 +7,31 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/vetDiscount", {
 
 const discountSeed = [
   {
-    Category: "Auto Care / Parts",
+    Category: "Auto Care and Parts",
     business: "Advance Auto Parts",
     description: "10% off with military ID",
     discount: "10%"
   },
   {
-    Category: "Auto Care / Parts",
+    Category: "Auto Care and Parts",
     business: "Auto Zone",
     description: "Varies Per Store – Discount varies, simply ask",
     discount: ""
   },
   {
-    Category: "Auto Care / Parts",
+    Category: "Auto Care and Parts",
     business: "Big 10 Tires",
     description: "Discount varies, simply ask.",
     discount: ""
   },
   {
-    Category: "Auto Care / Parts",
+    Category: "Auto Care and Parts",
     business: "Jiffy lube",
     description: "10% off",
     discount: "10%"
   },
   {
-    Category: "Auto Care / Parts",
+    Category: "Auto Care and Parts",
     business: "Kelly’s Auto Parts",
     description: "Kelly’s offers a 10% discount all the time for all vets and active service members.",
     discount: "10%"

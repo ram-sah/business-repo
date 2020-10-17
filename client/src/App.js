@@ -1,19 +1,20 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import SearchResult from "./components/SearchResult"
+import Categories from "./pages/Categories";
+import Businesses from "./pages/Business"
+
 class App extends Component {
   render() {
     return (
       
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to test API</h2>       
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Router>
+          <Route exact path="/" component={Categories}/>
+          <Route exact path="/business/:id" component={Businesses}/>
+        </Router>
+
+
       </div>
     );
   }
