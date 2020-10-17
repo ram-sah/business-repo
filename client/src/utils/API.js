@@ -54,3 +54,9 @@ axios.get(
   'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=philadelphia',
   business
 ).then(console.log).catch(console.log);
+.then(response=>{
+  console.log(response)
+  })
+  .catch(err=>{
+  console.log(err.message)
+  })
