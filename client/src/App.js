@@ -6,13 +6,12 @@ import Categories from "./pages/Categories";
 import Business from "./pages/Business"
 // import Nav from "./components/Nav";
 import Home from './pages/Home';
-import Footer from './components/Footer'
 // import Reports from './pages/Reports';
 // import Products from './pages/Products';
 // import Discover from "./pages/Discover";
 // import About from "./pages/About";
 // import Search from "./pages/Search";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Sidebar from "./components/Sidebar";
 
@@ -36,7 +35,7 @@ class App extends Component {
           {/* <Route exact path="/search" component={Search} /> */}
           </Switch>
         </Router>
-       <Footer />
+       {/* <Footer /> */}
        </div>
     );
   }

@@ -17,7 +17,7 @@ export default {
 
  
 }
-Yelp business search API 
+// Yelp business search API 
 const business = {
   corsdomain: true,
   headers: {
@@ -27,8 +27,13 @@ const business = {
 const bodyParameters = {
   key: ""
 };
-
 axios.get(
-  'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?name=' + name + '&latitude=' + latitude + '&longitude=' + longitude,
+  'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=nyc',
   business
 ).then(console.log).catch(console.log);
+
+
+// axios.get(
+//   'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?name=' + name + '&latitude=' + latitude + '&longitude=' + longitude,
+//   business
+// ).then(console.log).catch(console.log);
