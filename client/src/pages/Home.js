@@ -1,10 +1,11 @@
 import React from 'react';
 import "./home.css";
+import Footer from '../components/Footer'
 
 function Home(props) {
   return (
-    <div className='home'>
-    <h1>Home</h1>
+    <div className='head'>
+
     
     </div>
   );

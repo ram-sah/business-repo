@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Link } from "react";
 import API from "../utils/API";
+import './Home.js'
 import { BusinessList, BusinessListItem } from "../components/BusinessList/index";
 
 function Categories() {
@@ -29,7 +30,7 @@ function Categories() {
 
 
     return(
-        <div>
+        <div className='card'>
             <h1>HELLO WORLD</h1>
             <ul>
                 {categories.map(category => {
