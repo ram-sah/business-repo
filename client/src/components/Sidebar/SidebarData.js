@@ -10,7 +10,6 @@ export const SidebarData = [
     icon: <AiIcons.AiFillHome />,
     cName: 'nav-text'
   },
-
   {
     title: 'Log-in',
     path: '/messages',
@@ -23,19 +22,6 @@ export const SidebarData = [
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
-  {
-    title: 'Businesses',
-    path: '/Business',
-    icon: <FaIcons.FaCartPlus />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Location',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },
- 
   {
     title: 'Support',
     path: '/support',

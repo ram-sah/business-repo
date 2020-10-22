@@ -1,4 +1,4 @@
-.card {
+  .card {
     background-size: cover;
     background-position: center;
     background-clip: content-box;
@@ -10,6 +10,10 @@
     margin: 0 auto;
     margin-top: 30px;
   }
+
+  body {
+    background-color: black;
+  }
   
   .card .fa-spinner {
     font-size: 180px;
@@ -17,22 +21,22 @@
     left: 25%;
     top: 25%;
   }
-.home,
-.reports,
-.products {
-  display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
-.head {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url('../components/Images/Military-Discount_2020.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 14rem;
-  margin-top: 1px;
-}
+  .home,
+  .reports,
+  .products {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../components/Images/Military-Discount_2020.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-top: 1px;
+  }

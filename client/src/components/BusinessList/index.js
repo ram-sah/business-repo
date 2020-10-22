@@ -10,7 +10,7 @@ export function BusinessListItem(props) {
     return(
         <div>
             <a href={"/business/" + props.id}>{props.business}</a>
-            <p onClick={()=>props.handleClick(props.business)}>{props.description} </p>
+            <p>{props.description}</p>
             <p>Total Discount: {props.discount}</p>
         </div>
     )

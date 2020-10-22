@@ -27,12 +27,14 @@ app.get("*", function(req, res) {
 });
 
 // Connect to mongodb databases
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/vetDiscount", 
-{ 
-  useNewUrlParser: true, 
-  useUnifiedTopology: true 
-})
-
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/vetDiscount',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    
+  }
+);
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

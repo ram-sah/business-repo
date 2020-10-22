@@ -1,27 +1,36 @@
-import React, { useState, useEffect, Children } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import '../pages/Home.js'
+import QrGen from "../components/QRcode/index";
+import Map1 from "../components/Map/Map";
 
-let latitude;
-let longitude;
 
-function Businesses() {
-  const [currentBus, setCurrentbus] = useState({});
+function Businesses(props) {
+  const [currentBus, setCurrentbus] = useState();
+  const [currentDisc, setCurrentDisc] = useState();
+  const [description, setDescription] = useState();
+  const [latitude, setLatitude] = useState();
+  const [longitude, setLongitude] = useState();
   const { id } = useParams();
 
   useEffect(() => {
+    console.log(props)
     getPosition();
     loadBusiness(id);
-
-  });
+  },[currentBus]);
 
   function loadBusiness(id) {
     API.getBusiness(id)
       .then(res => {
         console.log(res.data.business)
         setCurrentbus(res.data.business)
+        setCurrentDisc(res.data.discount)
+        setDescription(res.data.description)
+        if(currentBus){
+          yelpBusiness(latitude, longitude, currentBus)
+        }
       })
   };
 
@@ -38,14 +47,14 @@ function Businesses() {
         "Longitude: " +
         position.coords.longitude
       );
-      latitude = position.coords.latitude;
-      longitude = position.coords.longitude;
+      setLatitude(position.coords.latitude);
+      setLongitude(position.coords.longitude);
     }
   }
 
-  function yelpBusiness(latitude, longitude) {
+  function yelpBusiness(latitude, longitude, currentBus) {
     const queryUrl = 'https://cors-anywhere.herokuapp.com/api.yelp.com/v3/businesses/search';
-console.log ("current", currentBus);
+
     axios.get(queryUrl, {
       headers: {
         Authorization: `Bearer 9AvFmvbitzJpbSlJPaDKPmZbkrL3bKKfqklkwvjYCPZ1xXVwI76ygHd3MJeM9Lglb9kKYbcgfBYFyfN-YFpn6OfsxYKkAe-AP1do3P4Z35iCUh9QflOthO_BaQuLX3Yx`
@@ -64,19 +73,15 @@ console.log ("current", currentBus);
       .catch(err => {
         console.log(err)
       })
-  }
-  function clickBus(event){
-
-  }
-  yelpBusiness(latitude, longitude)
+};
 
   return (
     <div className='card'>
-      <h2>BUSINESS PAGE</h2>
-      <h2>BUSINESS NAME</h2>
-      <h2>Map goes here</h2>
-      <button>Generate QR Code</button>
-
+      <h2>{currentBus}</h2>
+      <p>{description}</p>
+      <h2>MAP</h2>
+      <QrGen currentDisc={currentDisc} />
+      <Map1 />
     </div>
   )
 

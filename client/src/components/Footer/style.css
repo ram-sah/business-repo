@@ -5,10 +5,10 @@
 }
 
 .footer span {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: -20px;
+  left: 0;
   right: 0;
-  padding: 25px 0px;
+  padding: 3px;
   background: #B8B8B8;
 }
