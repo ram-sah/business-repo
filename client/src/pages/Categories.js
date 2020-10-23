@@ -25,34 +25,37 @@ function Categories() {
         API.getCategory(event.target.innerHTML)
             .then(res => {
                 setBusiness(res.data)
-            }); 
+            });
     };
 
 
-    return(
-        <div className='card'>
-            <h1>HELLO WORLD</h1>
-            <ul>
-                {categories.map(category => {
-                    return (<li key={category._id}>
-                        <a href={"/categories/" + category._id} onClick={handleClick}>
-                            <strong>{category.categoryList}</strong>
-                        </a>
-                    </li>
-                )})}
-            </ul>
-            <div>
-                <h1>{currentCat} Businesses</h1>
+    return (
+        <div>
+            <div className='card'>
+                <h1>Businesses List</h1>
+                <ul>
+                    {categories.map(category => {
+                        return (<h4 key={category._id}>
+                            <a href={"/categories/" + category._id} onClick={handleClick}>
+                                <strong>{category.categoryList}</strong>
+                            </a>
+                        </h4>
+                        )
+                    })}
+                </ul>
+            </div>
+            <div className='card'>
+                <h1>{currentCat} Businesses Details</h1>
                 <BusinessList>
                     {
                         business.map((business, i) => {
-                            return <BusinessListItem business={business.business} description={business.description} discount={business.discount} id={business._id} key={i}/>
+                            return <BusinessListItem business={business.business} description={business.description} discount={business.discount} id={business._id} key={i} />
                         })
                     }
                 </BusinessList>
             </div>
 
-        </div>
+        </div >
     )
 
 }

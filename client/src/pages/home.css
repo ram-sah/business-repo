@@ -1,21 +1,23 @@
   .card {
     background-size: cover;
-    background-position: center;
+    background-position: right;
+    text-align: left;
+    text-indent: 8em;
     background-clip: content-box;
     border: 6px solid white;
-    height: 400px;
-    width: 400px;
+    height: auto;
+    width: auto;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     position: relative;
-    margin: 0 auto;
+    margin-left: 18%;
     margin-top: 30px;
   }
 
   body {
-    background-color: black;
+    background-color: wheat;
   }
   
-  .card .fa-spinner {
+   .fa-spinner {
     font-size: 180px;
     position: absolute;
     left: 25%;
